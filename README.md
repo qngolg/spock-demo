@@ -1,6 +1,47 @@
-# Spock Demo工程
+#Spock Demo工程
 
-##Spock Maven import
+##Spock Maven 工程导入
+###引入maven依赖 groovy-all 和 spock-core
+```xml
+<!-- spock 引入 -->
+<dependency>
+    <groupId>org.spockframework</groupId>
+    <artifactId>spock-core</artifactId>
+    <version>1.2-groovy-2.4</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- groovy-all -->
+<dependency> 
+    <groupId>org.codehaus.groovy</groupId>
+    <artifactId>groovy-all</artifactId>
+    <version>2.4.15</version>
+</dependency>
+```
+###引入 gmaven-plugin 插件，用于写groovy文件
+```xml
+<plugin>
+    <groupId>org.codehaus.groovy.maven</groupId>
+    <artifactId>gmaven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>compile</goal>
+            </goals>
+            <configuration>
+                <sources>
+                    <fileset>
+                        <directory>${pom.basedir}/src/test/groovy</directory>
+                        <includes>
+                            <include>**/*.groovy</include>
+                        </includes>
+                    </fileset>
+                </sources>
+            </configuration>
+        </execution>
+    </executions>
+<plugin>
+```
 
 ##Spock 特性分析
 ```jshelllanguage
