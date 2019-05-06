@@ -52,7 +52,7 @@
 ```text
 setup 用于每个test之前运行一次，在given之前运行，
 setupSpec 在单个test或全部test运行时，只在最开始执行一次
-cleanup 在每个test运行之后运行一次，在then之后
+cleanup 在每个test运行之后运行一次，在then之后git remote add origin https://github.com/qngolg/mysql--.git
 cleanupSpec 在单个test或多个test运行时，只在最末尾执行一次
 ```
 对于setup 和clean up的官方解释
